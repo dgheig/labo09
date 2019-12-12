@@ -1,0 +1,52 @@
+name: C/C++ CI
+
+on: [push]
+
+jobs:
+  # build:
+
+  #   runs-on: ubuntu-latest
+
+  #   steps:
+  #   - uses: actions/checkout@master
+  #   - name: compile labo08
+  #     run: make labo08
+  #   - name: run labo08
+  #     run: ./builds/labo08  <<< "\n" # to finish the process
+
+  # debug_build:
+
+  #   runs-on: ubuntu-latest
+
+  #   steps:
+  #   - uses: actions/checkout@master
+  #   - name: compile labo08
+  #     run: make labo08 DEBUG=1
+  #   - name: run labo08
+  #     run: ./builds/labo08  <<< "\n" # to finish the process
+
+  # tests:
+
+  #   runs-on: ubuntu-latest
+
+  #   steps:
+  #   - uses: actions/checkout@master
+  #   - name: compile tests
+  #     run: make compile_tests
+  #   - name: test display_game
+  #     run: ./builds/display_game
+  #   - name: test compute_multiple_gens
+  #     run: ./builds/compute_multiple_gens
+
+  # debug_tests:
+
+  #   runs-on: ubuntu-latest
+
+  #   steps:
+  #   - uses: actions/checkout@master
+  #   - name: compile tests
+  #     run: make compile_tests DEBUG=1
+  #   - name: test display_game
+  #     run: ./builds/display_game
+  #   - name: test compute_multiple_gens
+  #     run: ./builds/compute_multiple_gens
