@@ -20,7 +20,7 @@ all: labo09 compile_tests
 
 main: labo09
 
-compile_tests: display_game compute_multiple_gens
+compile_tests:
 
 documentation:
 	mkdir -p doc && cd doc && mkdir -p doxy && doxygen Doxyfile && make -C doxy/latex && cp doxy/latex/refman.pdf doc.pdf
