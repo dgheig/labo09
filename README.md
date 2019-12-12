@@ -4,6 +4,9 @@
 * Riesen Florian
 * Gallay David
 
+### Language
+English
+
 ## Naming Conventions
 * Variables: camelCase
 * Functions: camelCase

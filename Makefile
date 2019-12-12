@@ -7,7 +7,7 @@ ifdef DEBUG
 	FLAGS += -DDEBUG
 endif
 
-SFML = -lsfml-graphics -lsfml-window -lsfml-system
+# SFML = -lsfml-graphics -lsfml-window -lsfml-system
 
 COMPILE = $(GXX) $(STD) $(FLAGS)
 
@@ -33,21 +33,21 @@ obj_dir:
 
 setup: build_dir obj_dir
 
-game_of_life.o: setup $(SRC)/game_of_life.h $(SRC)/game_of_life.cpp
-	$(COMPILE) -c $(SRC)/game_of_life.cpp -o $(OBJ)/game_of_life.o
+matrice.o: setup $(SRC)/matrice.h $(SRC)/matrice.cpp
+	$(COMPILE) -c $(SRC)/matrice.cpp -o $(OBJ)/matrice.o
 
-labo09.o: setup game_of_life.o labo_09_riesen_florian_gallay_david.cpp
+labo09.o: setup labo_09_riesen_florian_gallay_david.cpp
 	$(COMPILE) -c labo_09_riesen_florian_gallay_david.cpp -o $(OBJ)/labo09.o
 
-labo09: setup game_of_life.o labo09.o
-	$(COMPILE) $(SRC)/game_of_life.h $(OBJ)/game_of_life.o $(OBJ)/labo09.o -o $(BUILDS)/labo09
+labo09: setup matrice.o labo09.o
+	$(COMPILE) $(SRC)/matrice.h $(OBJ)/matrice.o $(OBJ)/labo09.o -o $(BUILDS)/labo09
 
 # TESTS
-display_game: $(TESTS)/display_game.cpp game_of_life.o
-	$(COMPILE) src/game_of_life.h $(OBJ)/game_of_life.o $(TESTS)/display_game.cpp -o $(BUILDS)/display_game
+# display_game: $(TESTS)/display_game.cpp game_of_life.o
+# 	$(COMPILE) src/game_of_life.h $(OBJ)/game_of_life.o $(TESTS)/display_game.cpp -o $(BUILDS)/display_game
 
-compute_multiple_gens: $(TESTS)/compute_multiple_gens.cpp game_of_life.o
-	$(COMPILE) src/game_of_life.h $(OBJ)/game_of_life.o $(TESTS)/compute_multiple_gens.cpp -o $(BUILDS)/compute_multiple_gens
+# compute_multiple_gens: $(TESTS)/compute_multiple_gens.cpp game_of_life.o
+# 	$(COMPILE) src/game_of_life.h $(OBJ)/game_of_life.o $(TESTS)/compute_multiple_gens.cpp -o $(BUILDS)/compute_multiple_gens
 
 # EXTRA
 
