@@ -51,8 +51,8 @@ compute_multiple_gens: $(TESTS)/compute_multiple_gens.cpp game_of_life.o
 
 # EXTRA
 
-sfml.o: extra/sfml.cpp
-	$(COMPILE) -c extra/sfml.cpp -o $(OBJ)/sfml.o
+# sfml.o: extra/sfml.cpp
+# 	$(COMPILE) -c extra/sfml.cpp -o $(OBJ)/sfml.o
 
-sfml: setup game_of_life.o sfml.o
-	$(COMPILE) $(SRC)/game_of_life.h $(OBJ)/game_of_life.o $(OBJ)/sfml.o -o $(BUILDS)/sfml $(SFML)
+# sfml: setup game_of_life.o sfml.o
+# 	$(COMPILE) $(SRC)/game_of_life.h $(OBJ)/game_of_life.o $(OBJ)/sfml.o -o $(BUILDS)/sfml $(SFML)

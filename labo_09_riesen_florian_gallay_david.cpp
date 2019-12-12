@@ -35,18 +35,6 @@ int main() {
       cout << "Debug is active" << endl;
    #endif
 
-   bool game[HEIGHT][WIDTH] = { { DEAD , DEAD , DEAD , DEAD , DEAD , DEAD , DEAD , DEAD , DEAD  },
-                                { DEAD , DEAD , DEAD , DEAD , DEAD , DEAD , DEAD , DEAD , DEAD  },
-                                { DEAD , DEAD , DEAD , DEAD , DEAD , DEAD , DEAD , DEAD , DEAD  },
-                                { DEAD , DEAD , DEAD , DEAD , ALIVE, DEAD , DEAD , DEAD , DEAD  },
-                                { DEAD , DEAD , DEAD , ALIVE, ALIVE, ALIVE, DEAD , DEAD , DEAD  },
-                                { DEAD , DEAD , DEAD , DEAD , ALIVE, DEAD , DEAD , DEAD , DEAD  },
-                                { DEAD , DEAD , DEAD , DEAD , DEAD , DEAD , DEAD , DEAD , DEAD  },
-                                { DEAD , DEAD , DEAD , DEAD , DEAD , DEAD , DEAD , DEAD , DEAD  },
-                                { DEAD , DEAD , DEAD , DEAD , DEAD , DEAD , DEAD , DEAD , DEAD  }};
-
-   displayGame(game);
-   computeMultipleGens(game, 10);
 
    WAIT_ENTER;
    return EXIT_SUCCESS;
