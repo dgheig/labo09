@@ -32,7 +32,7 @@ using namespace std;
 
 int main() {
    #ifdef DEBUG
-      cout << "Debug is active" << endl;
+      cout << "Debug is active !" << endl;
    #endif
 
 
