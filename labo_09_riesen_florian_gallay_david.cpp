@@ -25,11 +25,13 @@ using namespace std;
 #define WAIT_ENTER while(cin.get()!='\n')
 
 int main() {
-   #ifdef DEBUG
-      cout << "Debug is active !" << endl;
-   #endif
-
-
+   
+   Matrix matix = {{1,2,3,4},{5,6,7,8},{9,10,11,12},{1,2,3,4}};
+   
+   displayMatrice(matix);
+   
+   cout << isSquared(matix);
+   
    WAIT_ENTER;
    return EXIT_SUCCESS;
 }

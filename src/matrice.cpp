@@ -1,5 +1,6 @@
 #include "matrice.h"
 #include <algorithm>
+#include <iostream>
 using namespace std;
 
 bool hasSmallerSize(Vector left, Vector right);
@@ -19,6 +20,41 @@ void shuffleMatrix(Matrix& matrix) {
 
 }
 
+bool isSquared(const Matrix& matrix){
+   int nbLines = matrix.size();
+   for(Vector vec : matrix){
+      if(vec.size() != nbLines)
+         return false;
+   }
+   return true;
+}
+
+void displayMatrice(const Matrix& matrix){
+   cout<<"[";
+   int ElementNum = 1;
+   
+   for(Vector vec : matrix){
+      char separateur = ElementNum == matrix.size() ? '\0' : ',';
+      displayVec(vec);
+      cout << separateur;
+      ElementNum++;
+   }
+   
+   cout<<"]";
+}
+
+void displayVec(const Vector& vec){
+   cout<<"[";
+   int ElementNum = 1;
+   for(coef coeficient : vec){
+      char separateur = ElementNum == vec.size() ? '\0' : ',';
+      cout << coeficient << separateur ;
+      ElementNum++;
+
+   }
+      
+   cout<<"]";
+}
 
 bool hasSmallerSize(Vector left, Vector right) {
    return left.size() < right.size();
