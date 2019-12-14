@@ -18,6 +18,7 @@ Compilateur : MinGW-g++ 6.3.0 and g++ 7.4.0
 -----------------------------------------------------------------------------------*/
 #include <iostream>
 #include <cstdlib>
+#include <algorithm>
 #include "src/matrice.h"
 
 using namespace std;
@@ -26,11 +27,21 @@ using namespace std;
 
 int main() {
    
-   Matrix matix = {{1,2,3,4},{5,6,7,8},{9,10,11,12},{1,2,3,4}};
+   Matrix matix = {{13,14,15,16},{1,2,3,4},{8,5,6,7},{1,2,3,5}};
    
    displayMatrice(matix);
    
-   cout << isSquared(matix);
+   
+   
+   
+   int sumRL = 0;
+   int sumLR = 0;
+   sumDiagRL(matix, sumRL);
+   sumDiagLR(matix, sumLR);
+   
+   cout endl << "RL: " << sumRL;
+   cout endl << "LR: " << sumLR;  
+    
    
    WAIT_ENTER;
    return EXIT_SUCCESS;
