@@ -9,7 +9,7 @@ typedef std::vector<Vector> Matrix;
 
 
 void displayVec(const Vector& vec);
-void displayMatrice(const Matrix& matrix);
+void displayMatrix(const Matrix& matrix);
 
 bool isSquared(const Matrix& matrix);
 

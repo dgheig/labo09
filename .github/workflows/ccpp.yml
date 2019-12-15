@@ -3,50 +3,31 @@ name: C/C++ CI
 on: [push]
 
 jobs:
-  # build:
+  build:
 
-  #   runs-on: ubuntu-latest
+    runs-on: ubuntu-latest
 
-  #   steps:
-  #   - uses: actions/checkout@master
-  #   - name: compile labo08
-  #     run: make labo08
-  #   - name: run labo08
-  #     run: ./builds/labo08  <<< "\n" # to finish the process
+    steps:
+    - uses: actions/checkout@master
+    
+    - name: compile labo09
+      run: make labo09
 
-  # debug_build:
+    - name: run labo09
+      run: ./builds/labo09  <<< "\n" # to finish the process
 
-  #   runs-on: ubuntu-latest
+  tests:
 
-  #   steps:
-  #   - uses: actions/checkout@master
-  #   - name: compile labo08
-  #     run: make labo08 DEBUG=1
-  #   - name: run labo08
-  #     run: ./builds/labo08  <<< "\n" # to finish the process
+    runs-on: ubuntu-latest
 
-  # tests:
+    steps:
+    - uses: actions/checkout@master
 
-  #   runs-on: ubuntu-latest
+    - name: compile tests
+      run: make compile_tests
 
-  #   steps:
-  #   - uses: actions/checkout@master
-  #   - name: compile tests
-  #     run: make compile_tests
-  #   - name: test display_game
-  #     run: ./builds/display_game
-  #   - name: test compute_multiple_gens
-  #     run: ./builds/compute_multiple_gens
+    - name: test sumLine
+      run: ./builds/sumLine
 
-  # debug_tests:
-
-  #   runs-on: ubuntu-latest
-
-  #   steps:
-  #   - uses: actions/checkout@master
-  #   - name: compile tests
-  #     run: make compile_tests DEBUG=1
-  #   - name: test display_game
-  #     run: ./builds/display_game
-  #   - name: test compute_multiple_gens
-  #     run: ./builds/compute_multiple_gens
+    - name: test sumDiag
+      run: ./builds/sumDiag

@@ -15,7 +15,7 @@ void displayVec(const Vector& vec) {
    cout << endl;
 }
 
-void displayMatrice(const Matrix& matrix) {
+void displayMatrix(const Matrix& matrix) {
    writeMatrix(cout, matrix);
    cout << endl;
 }

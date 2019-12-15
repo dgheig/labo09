@@ -20,7 +20,7 @@ all: labo09 compile_tests
 
 main: labo09
 
-compile_tests:
+compile_tests: sumLine
 
 documentation:
 	mkdir -p doc && cd doc && mkdir -p doxy && doxygen Doxyfile && make -C doxy/latex && cp doxy/latex/refman.pdf doc.pdf
@@ -43,16 +43,9 @@ labo09: setup matrice.o labo09.o
 	$(COMPILE) $(SRC)/matrice.h $(OBJ)/matrice.o $(OBJ)/labo09.o -o $(BUILDS)/labo09
 
 # TESTS
-# display_game: $(TESTS)/display_game.cpp game_of_life.o
-# 	$(COMPILE) src/game_of_life.h $(OBJ)/game_of_life.o $(TESTS)/display_game.cpp -o $(BUILDS)/display_game
 
-# compute_multiple_gens: $(TESTS)/compute_multiple_gens.cpp game_of_life.o
-# 	$(COMPILE) src/game_of_life.h $(OBJ)/game_of_life.o $(TESTS)/compute_multiple_gens.cpp -o $(BUILDS)/compute_multiple_gens
+sumLine: $(TESTS)/sumLine.cpp matrice.o
+	$(COMPILE) src/matrice.h $(OBJ)/matrice.o $(TESTS)/sumLine.cpp -o $(BUILDS)/sumLine
 
-# EXTRA
-
-# sfml.o: extra/sfml.cpp
-# 	$(COMPILE) -c extra/sfml.cpp -o $(OBJ)/sfml.o
-
-# sfml: setup game_of_life.o sfml.o
-# 	$(COMPILE) $(SRC)/game_of_life.h $(OBJ)/game_of_life.o $(OBJ)/sfml.o -o $(BUILDS)/sfml $(SFML)
+sumDiag: $(TESTS)/sumDiag.cpp matrice.o
+	$(COMPILE) src/matrice.h $(OBJ)/matrice.o $(TESTS)/sumDiag.cpp -o $(BUILDS)/sumDiag
