@@ -20,7 +20,7 @@ all: labo09 compile_tests
 
 main: labo09
 
-compile_tests: sumLine
+compile_tests: sumLine sumDiag
 
 documentation:
 	mkdir -p doc && cd doc && mkdir -p doxy && doxygen Doxyfile && make -C doxy/latex && cp doxy/latex/refman.pdf doc.pdf
