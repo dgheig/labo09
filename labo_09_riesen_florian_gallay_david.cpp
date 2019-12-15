@@ -27,20 +27,32 @@ using namespace std;
 
 int main() {
    
-   Matrix matix = {{13,14,15,16},{1,2,3,4},{8,5,6,7},{1,2,3,5}};
+   Matrix matrix = {
+      {13,14,15,16},
+      {1,2,3,4},
+      {8,5,6,7},
+      {1,2,3,5}
+   };
+
+   Matrix matrix2 = {
+      {1, 2, 3, 5, 6},
+      {4, 7, 9},
+      {4, 2, 9},
+   };
    
-   displayMatrice(matix);
-   
-   
-   
+   displayMatrice(matrix);
+   cout << matrix << endl;;
    
    int sumRL = 0;
    int sumLR = 0;
-   sumDiagRL(matix, sumRL);
-   sumDiagLR(matix, sumLR);
+   sumDiagRL(matrix, sumRL);
+   sumDiagLR(matrix, sumLR);
    
-   cout endl << "RL: " << sumRL;
-   cout endl << "LR: " << sumLR;  
+
+   cout << "RL: " << sumRL << endl;
+   cout << "LR: " << sumLR << endl;
+
+   cout << "Maximum column size: " << maxCol(matrix2) << endl;
     
    
    WAIT_ENTER;
