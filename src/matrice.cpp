@@ -90,8 +90,8 @@ ostream& writeVector(ostream& os, Vector vec) {
    if(vec.size() > 0)
       os << vec[0];
 
-   for(auto iterator = vec.begin() + 1; iterator != vec.end(); ++iterator){
-      os << ", " << *iterator ;
+   for(size_t index = 1; index < vec.size(); ++index) {
+      os << ", " << vec[index] ;
    }
 
    os << ']';
@@ -104,9 +104,9 @@ ostream& writeMatrix(ostream& os, Matrix matrix) {
    if(matrix.size() > 0)
       writeVector(os, matrix[0]);
 
-   for(auto iterator = matrix.begin() + 1; iterator != matrix.end(); ++iterator){
+   for(size_t index = 1; index < matrix.size(); ++index){
       os << ", ";
-      writeVector(os, *iterator);
+      writeVector(os, matrix[index]);
    }
 
    os << ']';
