@@ -1,5 +1,6 @@
 #include "matrice.h"
 #include <algorithm>
+#include <numeric>
 #include <iostream>
 #include <ctime>
 using namespace std;
@@ -62,20 +63,20 @@ void sortMatrix(Matrix& matrix){
 bool sumDiagRL(const Matrix& matrix, coef& sum){
    if(!isSquared(matrix))
       return false;
-      
+
    sum = 0;
    for(size_t line = 0, column = matrix.size() - 1; line < matrix.size(); ++line, --column) {
       sum += matrix[line][column];
    }
-   
+
    return true;
 }
-   
+
 bool sumDiagLR(const Matrix& matrix, coef& sum){
 
    if(!isSquared(matrix))
       return false;
-   
+
    sum = 0;
    for(size_t line = 0; line < matrix.size(); ++line) {
       sum += matrix[line][line];
@@ -92,7 +93,7 @@ ostream& writeVector(ostream& os, Vector vec) {
    for(auto iterator = vec.begin() + 1; iterator != vec.end(); ++iterator){
       os << ", " << *iterator ;
    }
-      
+
    os << ']';
    return os;
 }
@@ -102,12 +103,12 @@ ostream& writeMatrix(ostream& os, Matrix matrix) {
 
    if(matrix.size() > 0)
       writeVector(os, matrix[0]);
-   
+
    for(auto iterator = matrix.begin() + 1; iterator != matrix.end(); ++iterator){
       os << ", ";
       writeVector(os, *iterator);
    }
-   
+
    os << ']';
    return os;
 }
@@ -137,11 +138,7 @@ bool maxValueIsSmaller(const Vector& left, const Vector& right) {
 }
 
 coef sumLineValues(const Vector& vec) {
-   coef sum = 0;
-   for(auto val : vec) {
-      sum += val;
-   }
-   return sum;
+   return accumulate(vec.begin(), vec.end(), 0);
 }
 
 bool valuesSumIsSmaller(const Vector& left, const Vector& right) {
