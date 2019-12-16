@@ -3,9 +3,9 @@
 Laboratoire : Labo_09
 Fichier     : sumDiag.cpp
 Auteur(s)   : Florian Riesen et David Gallay
-Date        : 
+Date        :
 
-But         : 
+But         :
 Remarque(s) :
 
 Compilateur : MinGW-g++ 6.3.0 and g++ 7.4.0
@@ -21,7 +21,7 @@ bool testSumDiagRL(const Matrix& matrix, coef expected = 0) {
     int sum = 0;
     displayMatrix(matrix);
     sumDiagRL(matrix, sum);
-    
+
     if (sum != expected) {
         cerr << "sumDiagRL(matrix) has different value than expected\n"
              << "Expected: " << expected << '\n'
@@ -36,7 +36,7 @@ bool testSumDiagLR(const Matrix& matrix, coef expected = 0) {
     int sum = 0;
     displayMatrix(matrix);
     sumDiagLR(matrix, sum);
-    
+
     if (sum != expected) {
         cerr << "sumDiagLR(matrix) has different value than expected\n"
              << "Expected: " << expected << '\n'
@@ -60,5 +60,5 @@ int main() {
     testSumDiagRL(matrix, 25);
 
 
-    return EXIT_SUCCESS;
+    return exit_value;
 }

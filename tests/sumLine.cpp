@@ -3,7 +3,7 @@
 Laboratoire : Labo_09
 Fichier     : sumLine.cpp
 Auteur(s)   : Florian Riesen et David Gallay
-Date        : 
+Date        :
 
 But         :
 Remarque(s) :
@@ -41,7 +41,7 @@ bool testSumLine(const Matrix& matrix, const Vector& expected) {
 }
 
 int main() {
-   
+
    Matrix matrix = {
       {13,14,15,16},
       {1,2,3,4},
@@ -56,8 +56,8 @@ int main() {
    };
 
    testSumLine(matrix, {58, 10, 26, 11});
-   testSumLine(matrix, {17, 20, 15});
-    
+   testSumLine(matrix2, {17, 20, 15});
 
-   return EXIT_SUCCESS;
+
+   return exit_value;
 }
