@@ -125,22 +125,51 @@ ostream& operator<<(ostream& os, const Matrix& matrix)
 
 // Utilities function only defined in .cpp
 
+/**
+ * Take two vectors, left and right and return left < right
+ * @param left left operand
+ * @param right right operand
+ * @return left < right
+ */
 bool hasSmallerSize(const Vector& left, const Vector& right) {
    return left.size() < right.size();
 }
 
+
+/**
+ * return the maximum value of a vector
+ * @param vec
+ * @return max value of a vector (using operator<)
+ */
 coef maxOfVector(const Vector& vec) {
    return *max_element(vec.begin(), vec.end());
 }
 
+/**
+ * Say if left biggest element is smaller than right
+ * @param left
+ * @param right
+ * @return  true if the biggest element of left is smaller than the one of right
+ */
 bool maxValueIsSmaller(const Vector& left, const Vector& right) {
    return maxOfVector(left) < maxOfVector(right);
 }
 
+/**
+ * Sum of the values in the vector
+ * @param vec
+ * @return summed values
+ */
 coef sumLineValues(const Vector& vec) {
    return accumulate(vec.begin(), vec.end(), 0);
 }
 
+/**
+ * Compare the sum of the values of two vectors
+ * @param left
+ * @param right
+ * @return sumLineValues(left) < sumLineValues(right)
+ */
 bool valuesSumIsSmaller(const Vector& left, const Vector& right) {
    return sumLineValues(left) < sumLineValues(right);
 }

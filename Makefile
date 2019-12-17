@@ -20,7 +20,7 @@ all: labo09 compile_tests
 
 main: labo09
 
-compile_tests: sumLine sumDiag
+compile_tests: sumLine sumDiag shuffleMatrix
 
 documentation:
 	mkdir -p doc && cd doc && mkdir -p doxy && doxygen Doxyfile && make -C doxy/latex && cp doxy/latex/refman.pdf doc.pdf
@@ -49,3 +49,6 @@ sumLine: $(TESTS)/sumLine.cpp matrice.o
 
 sumDiag: $(TESTS)/sumDiag.cpp matrice.o
 	$(COMPILE) src/matrice.h $(OBJ)/matrice.o $(TESTS)/sumDiag.cpp -o $(BUILDS)/sumDiag
+
+shuffleMatrix: $(TESTS)/shuffleMatrix.cpp matrice.o
+	$(COMPILE) src/matrice.h $(OBJ)/matrice.o $(TESTS)/shuffleMatrix.cpp -o $(BUILDS)/shuffleMatrix
