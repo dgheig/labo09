@@ -9,7 +9,7 @@ jobs:
 
     steps:
     - uses: actions/checkout@master
-    
+
     - name: compile labo09
       run: make labo09
 
@@ -31,3 +31,6 @@ jobs:
 
     - name: test sumDiag
       run: ./builds/sumDiag
+
+    - name: test shuffleMatrix
+      run: ./builds/shuffleMatrix
