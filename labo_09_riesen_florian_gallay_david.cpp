@@ -36,7 +36,6 @@ int main() {
         {4, 2, 9},
     };
 
-    displayMatrix(matrix);
     cout << matrix << endl;;
 
     int sumRL = 0;

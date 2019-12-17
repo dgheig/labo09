@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['issquared',['isSquared',['../matrice_8h.html#a4b8641318c6c79dde5c413801ae97528',1,'matrice.h']]]
+  ['maxcol',['maxCol',['../matrice_8h.html#a540be8b3739e6c68ceddfac24f1a14c8',1,'matrice.h']]]
 ];

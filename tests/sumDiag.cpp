@@ -19,7 +19,7 @@ int exit_value = EXIT_SUCCESS;
 
 bool testSumDiagRL(const Matrix& matrix, coef expected = 0) {
     int sum = 0;
-    displayMatrix(matrix);
+    cout << matrix << endl;
     sumDiagRL(matrix, sum);
 
     if (sum != expected) {
@@ -34,7 +34,7 @@ bool testSumDiagRL(const Matrix& matrix, coef expected = 0) {
 
 bool testSumDiagLR(const Matrix& matrix, coef expected = 0) {
     int sum = 0;
-    displayMatrix(matrix);
+    cout << matrix << endl;
     sumDiagLR(matrix, sum);
 
     if (sum != expected) {

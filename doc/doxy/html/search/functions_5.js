@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['vectminsum',['vectMinSum',['../matrice_8h.html#a1c8cf7b5fd2878afd3a4a79958e005cb',1,'matrice.h']]]
+  ['writematrix',['writeMatrix',['../matrice_8h.html#a5bd48268e8ff721575d1f123eccc7b1d',1,'matrice.h']]],
+  ['writevector',['writeVector',['../matrice_8h.html#a88736df9034aa0002434cad844d08aa6',1,'matrice.h']]]
 ];

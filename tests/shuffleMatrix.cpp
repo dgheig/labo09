@@ -45,14 +45,12 @@ int main() {
    Matrix shuffled2 = matrix;
    shuffleMatrix(shuffled2);
 
-   displayMatrix(matrix);
-   cout << endl;
-
-   displayMatrix(shuffled1);
-   cout << endl;
-
-   displayMatrix(shuffled2);
-   cout << endl;
+   cout  << matrix
+         << endl << endl
+         << shuffled1
+         << endl << endl
+         << shuffled2
+         << endl << endl;
 
    if(compareMatrix(matrix, shuffled1)) return EXIT_FAILURE;
    if(compareMatrix(matrix, shuffled2)) return EXIT_FAILURE;

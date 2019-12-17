@@ -47,17 +47,6 @@ coef sumLineValues(const Vector& vec);
 bool valuesSumIsSmaller(const Vector& left, const Vector& right);
 
 
-
-void displayVec(const Vector& vec) {
-   writeVector(cout, vec);
-   cout << endl;
-}
-
-void displayMatrix(const Matrix& matrix) {
-   writeMatrix(cout, matrix);
-   cout << endl;
-}
-
 bool isSquared(const Matrix& matrix) {
    size_t nbLines = matrix.size();
    for(Vector vec : matrix){

@@ -22,8 +22,8 @@ int exit_value = EXIT_SUCCESS;
 
 bool testSumLine(const Matrix& matrix, const Vector& expected) {
     Vector summed = sumLine(matrix);
-    displayVec(summed);
-    displayVec(expected);
+    cout << summed   << endl
+         << expected << endl;
     if(summed.size() != expected.size()) {
         cerr << "sumLine(matrix) has different size than expected";
         exit_value = EXIT_FAILURE;

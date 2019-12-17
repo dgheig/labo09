@@ -3,24 +3,12 @@
 #include <vector>
 #include <iostream>
 
-//Definition du type coef 
+//Definition du type coef
 typedef int coef;
-//Definition du type Vector 
+//Definition du type Vector
 typedef std::vector<coef> Vector;
 //Definition du type Matrix
 typedef std::vector<Vector> Matrix;
-
-/**
- * Affichage d'un vecteur sous la forme [v1,v2,v3]
- * @param vec  vecteur qui sera affiche
- */
-void displayVec(const Vector& vec);
-
-/**
- * Affichage d'une matrice sous la forme [[v1,v2,v3],[v4,v5,v6]]
- * @param matrix  vecteur qui sera affiche
- */
-void displayMatrix(const Matrix& matrix);
 
 /**
  * Verification du fait que la matrice soit carree
@@ -57,7 +45,7 @@ Vector vectMinSum(const Matrix& matrix);
 void shuffleMatrix(Matrix& matrix);
 
 /**
- * Trie les vecteurs de la matrice en fonction du plus grand element de 
+ * Trie les vecteurs de la matrice en fonction du plus grand element de
  * chaque vecteur
  * @param matrix Matrice a evaluer
  */
@@ -80,7 +68,7 @@ bool sumDiagRL(const Matrix& matrix, coef& sum);
 bool sumDiagLR(const Matrix& matrix, coef& sum);
 
 /**
- * 
+ *
  * @param os flux de sortie
  * @param vec Vecteur a ecrire
  * @return retour de la reference du flux de sortie
@@ -88,7 +76,7 @@ bool sumDiagLR(const Matrix& matrix, coef& sum);
 std::ostream& writeVector(std::ostream& os, Vector vec);
 
 /**
- * 
+ *
  * @param os flux de sortie
  * @param matrix Matrice a ecrire
  * @return retour de la reference du flux de sortie
@@ -97,7 +85,7 @@ std::ostream& writeMatrix(std::ostream& os, Matrix matrix);
 
 /**
  * Surchage de l'operateur << pour les type Vector
- * @param os 
+ * @param os
  * @param vec Vecteurs a afficher
  * @return  retour de la reference du flux de sortie
  */

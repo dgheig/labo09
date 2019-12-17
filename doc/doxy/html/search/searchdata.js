@@ -1,8 +1,8 @@
 var indexSectionsWithContent =
 {
-  0: "cdimosvw",
+  0: "cimosvw",
   1: "m",
-  2: "dimosvw",
+  2: "imosvw",
   3: "cmv"
 };
 
