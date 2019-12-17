@@ -7,11 +7,46 @@
 #include <chrono>
 using namespace std;
 
+
+/**
+ * Compare la taille de deux vecteur
+ * @param left left operand
+ * @param right right operand
+ * @return left < right
+ */
 bool hasSmallerSize(const Vector& left, const Vector& right);
+
+/**
+ * Retourne la plus grande valeure contenue dans le vecteur vec
+ * @param vec
+ * @return Plus grande valeur du vecteur (avec operator<)
+ */
 coef maxOfVector(const Vector& vec);
+
+/**
+ * Compare les valeurs les plus grandes de deux vecteurs
+ * @param left
+ * @param right
+ * @return  vrai si le vecteur left a une valeur max plus petite que celle du vecteur right
+ */
 bool maxValueIsSmaller(const Vector& left, const Vector& right);
+
+/**
+ * Somme les valeurs du vecteur
+ * @param vec
+ * @return valeurs additionnees
+ */
 coef sumLineValues(const Vector& vec);
+
+/**
+ * Compare la somme des valeurs de deux vecteurs
+ * @param left
+ * @param right
+ * @return vrai si la somme du vecteur left est plus petite que celle du vecteur right
+ */
 bool valuesSumIsSmaller(const Vector& left, const Vector& right);
+
+
 
 void displayVec(const Vector& vec) {
    writeVector(cout, vec);
@@ -47,11 +82,22 @@ Vector vectMinSum(const Matrix& matrix) {
 }
 
 void shuffleMatrix(Matrix& matrix) {
-   // std::random_device rd;
-   // std::mt19937 generator(rd());
-   // auto generator = std::default_random_engine {};
-   // std::shuffle(matrix.begin(), matrix.end(), generator);
-   // srand(unsigned(time(std::chrono::system_clock::now())));
+   /*
+      NB:
+         1) srand(unsigned(time(nullptr))) is omitted
+            The value is already initialized as needed
+         2) random_suffle is deprecated since c++11, we should
+            create a generator:
+               auto generator = std::default_random_engine {};
+            or
+               std::random_device rd;
+               std::mt19937 generator(rd());
+            Then, use the generator with shuffle function:
+               shuffle(matrix.begin(), matrix.end(), generator);
+
+            We used random_suffle to match the lesson
+
+   */;
    random_shuffle(matrix.begin(), matrix.end());
 }
 
@@ -127,51 +173,22 @@ ostream& operator<<(ostream& os, const Matrix& matrix)
 
 // Utilities function only defined in .cpp
 
-/**
- * Take two vectors, left and right and return left < right
- * @param left left operand
- * @param right right operand
- * @return left < right
- */
 bool hasSmallerSize(const Vector& left, const Vector& right) {
    return left.size() < right.size();
 }
 
-
-/**
- * return the maximum value of a vector
- * @param vec
- * @return max value of a vector (using operator<)
- */
 coef maxOfVector(const Vector& vec) {
    return *max_element(vec.begin(), vec.end());
 }
 
-/**
- * Say if left biggest element is smaller than right
- * @param left
- * @param right
- * @return  true if the biggest element of left is smaller than the one of right
- */
 bool maxValueIsSmaller(const Vector& left, const Vector& right) {
    return maxOfVector(left) < maxOfVector(right);
 }
 
-/**
- * Sum of the values in the vector
- * @param vec
- * @return summed values
- */
 coef sumLineValues(const Vector& vec) {
    return accumulate(vec.begin(), vec.end(), 0);
 }
 
-/**
- * Compare the sum of the values of two vectors
- * @param left
- * @param right
- * @return sumLineValues(left) < sumLineValues(right)
- */
 bool valuesSumIsSmaller(const Vector& left, const Vector& right) {
    return sumLineValues(left) < sumLineValues(right);
 }

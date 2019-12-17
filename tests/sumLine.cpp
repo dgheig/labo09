@@ -3,9 +3,9 @@
 Laboratoire : Labo_09
 Fichier     : sumLine.cpp
 Auteur(s)   : Florian Riesen et David Gallay
-Date        :
+Date        : 17.12.2019
 
-But         :
+But         : test function sumLine
 Remarque(s) :
 
 Compilateur : MinGW-g++ 6.3.0 and g++ 7.4.0

@@ -3,13 +3,13 @@
 Laboratoire : Labo_09
 Fichier     : labo_09_riesen_florian_gallay_david.cpp
 Auteur(s)   : Florian Riesen et David Gallay
-Date        : 
+Date        : 17.12.2019
 
-But         : 
+But         : Apply many algorithms on matrix
 Remarque(s) :
 
-There is the github repository:
-https://github.com/dgheig/labo09
+                There is the github repository:
+                https://github.com/dgheig/labo09
 
 Compilateur : MinGW-g++ 6.3.0 and g++ 7.4.0
 -----------------------------------------------------------------------------------*/

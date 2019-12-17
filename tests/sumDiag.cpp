@@ -3,9 +3,9 @@
 Laboratoire : Labo_09
 Fichier     : sumDiag.cpp
 Auteur(s)   : Florian Riesen et David Gallay
-Date        :
+Date        : 17.12.2019
 
-But         :
+But         : test functions sumDiagLR and sumDiagRL
 Remarque(s) :
 
 Compilateur : MinGW-g++ 6.3.0 and g++ 7.4.0
