@@ -31,10 +31,12 @@ bool compareMatrix(const Matrix& m1, const Matrix& m2) {
 int main() {
 
     Matrix matrix = {
-        {13,14,15,16},
-        {1,2,3,4},
-        {8,5,6,7},
-        {1,2,3,5}
+        {13, 14, 15, 16, 6},
+        {1, 2, 3, 4, 2},
+        {8, 5, 6, 7},
+        {1, 2, 3, 5},
+        {1, 7, 3, 79},
+        {11, 12, 15, 8, 6},
     };
 
    Matrix shuffled1 = matrix;

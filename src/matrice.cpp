@@ -3,6 +3,8 @@
 #include <numeric>
 #include <iostream>
 #include <ctime>
+#include <random>
+#include <chrono>
 using namespace std;
 
 bool hasSmallerSize(const Vector& left, const Vector& right);
@@ -46,10 +48,10 @@ Vector vectMinSum(const Matrix& matrix) {
 
 void shuffleMatrix(Matrix& matrix) {
    // std::random_device rd;
-   // std::mt19937 g(rd());
-   // std::shuffle(v.begin(), v.end(), g);
-
-   srand(unsigned(time(NULL)));
+   // std::mt19937 generator(rd());
+   // auto generator = std::default_random_engine {};
+   // std::shuffle(matrix.begin(), matrix.end(), generator);
+   // srand(unsigned(time(std::chrono::system_clock::now())));
    random_shuffle(matrix.begin(), matrix.end());
 }
 
