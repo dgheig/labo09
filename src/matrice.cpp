@@ -67,7 +67,9 @@ Vector sumLine(const Matrix& matrix) {
 }
 
 Vector vectMinSum(const Matrix& matrix) {
-   return *min_element(matrix.begin(), matrix.end(), valuesSumIsSmaller);
+   if(matrix.size())
+      return *min_element(matrix.begin(), matrix.end(), valuesSumIsSmaller);
+   return Vector();
 }
 
 void shuffleMatrix(Matrix& matrix) {

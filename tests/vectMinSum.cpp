@@ -20,19 +20,19 @@ using namespace std;
 int exit_value = EXIT_SUCCESS;
 
 
-bool testSumLine(const Matrix& matrix, const Vector& expected) {
-    Vector summed = sumLine(matrix);
-    cout << summed   << endl
+bool testvectMinSum(const Matrix& matrix, const Vector& expected) {
+    Vector minSum = vectMinSum(matrix);
+    cout << minSum   << endl
          << expected << endl;
-    if(summed.size() != expected.size()) {
-        cerr << "sumLine(matrix) has different size than expected" << endl;
+    if(minSum.size() != expected.size()) {
+        cerr << "vectMinSum(matrix) has different size than expected" << endl;
         exit_value = EXIT_FAILURE;
         return false;
     }
     for(size_t index = 0; index < expected.size(); ++index) {
 
-        if(summed[index] != expected[index]) {
-            cerr << "Values of sumLine(matrix) are different than expected" << endl;
+        if(minSum[index] != expected[index]) {
+            cerr << "Values of vectMinSum(matrix) are different than expected" << endl;
             exit_value = EXIT_FAILURE;
             return false;
         }
@@ -57,9 +57,9 @@ int main() {
 
    Matrix matrix3 = {};
 
-   testSumLine(matrix, {58, 10, 26, 11});
-   testSumLine(matrix2, {17, 20, 15});
-   testSumLine(matrix3, {});
+   testvectMinSum(matrix, {1,2,3,4});
+   testvectMinSum(matrix2, {4, 2, 9});
+   testvectMinSum(matrix3, {});
 
 
    return exit_value;

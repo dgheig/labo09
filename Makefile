@@ -20,7 +20,7 @@ all: labo09 compile_tests
 
 main: labo09
 
-compile_tests: sumLine sumDiag shuffleMatrix
+compile_tests: sumLine sumDiag shuffleMatrix vectMinSum
 
 documentation:
 	mkdir -p doc && cd doc && mkdir -p doxy && doxygen Doxyfile && make -C doxy/latex && cp doxy/latex/refman.pdf doc.pdf
@@ -52,3 +52,6 @@ sumDiag: $(TESTS)/sumDiag.cpp matrice.o
 
 shuffleMatrix: $(TESTS)/shuffleMatrix.cpp matrice.o
 	$(COMPILE) src/matrice.h $(OBJ)/matrice.o $(TESTS)/shuffleMatrix.cpp -o $(BUILDS)/shuffleMatrix
+
+vectMinSum: $(TESTS)/vectMinSum.cpp matrice.o
+	$(COMPILE) src/matrice.h $(OBJ)/matrice.o $(TESTS)/vectMinSum.cpp -o $(BUILDS)/vectMinSum
