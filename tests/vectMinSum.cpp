@@ -1,11 +1,11 @@
 /*
 -----------------------------------------------------------------------------------
 Laboratoire : Labo_09
-Fichier     : sumLine.cpp
+Fichier     : vectMinSum.cpp
 Auteur(s)   : Florian Riesen et David Gallay
 Date        : 17.12.2019
 
-But         : test function sumLine
+But         : test function vectMinSum
 Remarque(s) :
 
 Compilateur : MinGW-g++ 6.3.0 and g++ 7.4.0

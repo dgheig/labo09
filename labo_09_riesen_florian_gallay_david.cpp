@@ -5,7 +5,7 @@ Fichier     : labo_09_riesen_florian_gallay_david.cpp
 Auteur(s)   : Florian Riesen et David Gallay
 Date        : 17.12.2019
 
-But         : Apply many algorithms on matrix
+But         : Analyse matrix by applying many algorithms on it
 Remarque(s) :
 
                 There is the github repository:
